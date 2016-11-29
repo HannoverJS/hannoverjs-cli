@@ -1,0 +1,38 @@
+{
+  "name": "hannoverjs-cli",
+  "version": "0.1.0",
+  "description": "CLI for HannoverJS",
+  "homepage": "https://hannoverjs.de",
+  "license": "MIT",
+  "repository": "hannoverjs/hannoverjs-cli",
+  "author": {
+    "name": "Tim Cheung",
+    "email": "tim@cheung.io"
+  },
+  "bin": {
+    "hannoverjs": "cli.js"
+  },
+  "scripts": {
+    "test": "eslint src && ava",
+    "prepublish": "npm test"
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "hannover",
+    "hannoverjs",
+    "cli"
+  ],
+  "dependencies": {
+    "meow": "^3.7.0"
+  },
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "eslint": "^3.11.1",
+    "eslint-config-timche": "^2.0.1"
+  },
+  "eslintConfig": {
+    "extends": "timche"
+  }
+}
