@@ -28,7 +28,7 @@
     "meow": "^3.7.0"
   },
   "devDependencies": {
-    "ava": "^0.15.2",
+    "ava": "^0.17.0",
     "eslint": "^3.11.1",
     "eslint-config-timche": "^2.0.1"
   },
