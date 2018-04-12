@@ -1,38 +1,38 @@
 {
   "name": "hannoverjs-cli",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "CLI for HannoverJS",
-  "homepage": "https://hannoverjs.de",
-  "license": "MIT",
-  "repository": "hannoverjs/hannoverjs-cli",
-  "author": {
-    "name": "Tim Cheung",
-    "email": "tim@cheung.io"
-  },
   "bin": {
-    "hannoverjs": "cli.js"
+    "hannoverjs": "index.js"
   },
-  "scripts": {
-    "test": "eslint src && ava",
-    "prepublish": "npm test"
-  },
-  "files": [
-    "build"
-  ],
-  "keywords": [
-    "hannover",
-    "hannoverjs",
-    "cli"
-  ],
+  "repository": "hannoverjs/cli",
+  "author": "Tim Cheung <tim@cheung.io>",
+  "license": "MIT",
   "dependencies": {
-    "meow": "^3.7.0"
+    "hannoverjs": "^2.0.1",
+    "meow": "^4.0.0",
+    "ora": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "^0.15.2",
-    "eslint": "^3.11.1",
-    "eslint-config-timche": "^2.0.1"
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.12.0",
+    "xo": "^0.20.3"
   },
-  "eslintConfig": {
-    "extends": "timche"
+  "prettier": {
+    "singleQuote": false,
+    "semi": false,
+    "bracketSpacing": false
+  },
+  "xo": {
+    "prettier": true,
+    "spaces": true
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
